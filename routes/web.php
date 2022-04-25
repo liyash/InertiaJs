@@ -107,8 +107,14 @@ Route::middleware('auth')->group(function(){
         return inertia::render('Settings');
     });
     Route::post('logout', function () {
-       // dump(request('username'));
-    });
+        Auth::guard('web')->logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect()->route('login');
+    })->name('logout');
 });
 
 

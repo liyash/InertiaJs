@@ -15,8 +15,12 @@
                 <NavLink :active="$page.component==='Settings'"  linkRef="settings" >Settings</NavLink>
 
             </li>
-            <li><Link method="post" as="button"  href="logout" >Logout</Link>
-
+            <li class="flex text-blue-500 hover:underline">
+            <form @submit.prevent="logout()">
+            <button as="button" type="submit">
+                    Logout
+            </button>
+            </form>
                 
             </li>
             
@@ -27,6 +31,12 @@
 import NavLink  from './NavLink';
 import {Link} from '@inertiajs/inertia-vue';
 export default {
-    components:{NavLink,Link}
+    components:{NavLink,Link},
+    methods:{
+        logout() {
+            this.$inertia.post(route('logout'));
+        },
+    }
+
 }
 </script>

@@ -5862,12 +5862,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     NavLink: _NavLink__WEBPACK_IMPORTED_MODULE_0__["default"],
     Link: _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__.Link
+  },
+  methods: {
+    logout: function logout() {
+      this.$inertia.post(route('logout'));
+    }
   }
 });
 
@@ -38657,17 +38666,24 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "Link",
-            { attrs: { method: "post", as: "button", href: "logout" } },
-            [_vm._v("Logout")]
-          )
-        ],
-        1
-      )
+      _c("li", { staticClass: "flex text-blue-500 hover:underline" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.logout()
+              }
+            }
+          },
+          [
+            _c("button", { attrs: { as: "button", type: "submit" } }, [
+              _vm._v("\n                Logout\n        ")
+            ])
+          ]
+        )
+      ])
     ])
   ])
 }
