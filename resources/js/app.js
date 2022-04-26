@@ -5,6 +5,7 @@ import Vue from 'vue';
 import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue';
 import PortalVue from 'portal-vue';
 import {Link} from '@inertiajs/inertia-vue';
+import Layout from './shared/Layout';
 
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);
@@ -17,7 +18,12 @@ new Vue({
         h(InertiaApp, {
             props: {
                 initialPage: JSON.parse(app.dataset.page),
-                resolveComponent: (name) => require(`./Pages/${name}`).default,
+                resolveComponent: (name) => 
+                {
+                   let page = require(`./Pages/${name}`).default;
+                   page.layout=Layout;
+                   return page;
+                }
             },
         }),
 }).$mount(app);

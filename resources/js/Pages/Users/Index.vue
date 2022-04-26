@@ -3,6 +3,9 @@
 <Layout>
     <div class="flex justify-between">
         <h1 class="text-3xl">List Users</h1>
+        <div>
+          <Link class="text-blue-500 hover:underline" href="usercreate"> Add User</Link>
+        </div>
         <input  v-model="params.search" type="text" placeholder="Search.." />
     </div>
 <div class="overflow-x-auto">

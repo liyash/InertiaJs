@@ -107,7 +107,7 @@ Route::middleware('auth')->group(function(){
         return inertia::render('Settings');
     });
     Route::post('logout', function () {
-        Auth::guard('web')->logout();
+        \Auth::guard('web')->logout();
 
         request()->session()->invalidate();
 
