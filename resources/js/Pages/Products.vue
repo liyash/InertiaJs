@@ -5,7 +5,7 @@
                     </h2>
 <button @click="openModal()"
                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
-                       +
+                          + 
                     </button>
         </div>
 <div class="bg-white">
