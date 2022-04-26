@@ -5942,9 +5942,15 @@ new vue__WEBPACK_IMPORTED_MODULE_3__["default"]({
       props: {
         initialPage: JSON.parse(app.dataset.page),
         resolveComponent: function resolveComponent(name) {
+          var _page$layout;
+
           var page = __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
 
-          page.layout = _shared_Layout__WEBPACK_IMPORTED_MODULE_2__["default"];
+          if (!page.layout) {
+            page.layout = _shared_Layout__WEBPACK_IMPORTED_MODULE_2__["default"];
+          }
+
+          (_page$layout = page.layout) !== null && _page$layout !== void 0 ? _page$layout : _shared_Layout__WEBPACK_IMPORTED_MODULE_2__["default"];
           return page;
         }
       }
@@ -38803,28 +38809,32 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("section", { staticClass: "p-6  bg-gray-200" }, [
-      _c(
-        "header",
-        { staticClass: "flex justify-between" },
-        [
-          _c("div", { staticClass: "flex item-center" }, [
-            _c("h1", { staticClass: "font-bold text-lg" }, [_vm._v("My App")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-sm ml-4" }, [
-              _vm._v(
-                "\n                Welcome back , " +
-                  _vm._s(_vm.$page.props.auth.user.username.name) +
-                  "\n            "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("Nav")
-        ],
-        1
-      )
-    ]),
+    _vm.$page.props.auth.user.username
+      ? _c("section", { staticClass: "p-6  bg-gray-200" }, [
+          _c(
+            "header",
+            { staticClass: "flex justify-between" },
+            [
+              _c("div", { staticClass: "flex item-center" }, [
+                _c("h1", { staticClass: "font-bold text-lg" }, [
+                  _vm._v("My App")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-sm ml-4" }, [
+                  _vm._v(
+                    "\n                Welcome back , " +
+                      _vm._s(_vm.$page.props.auth.user.username.name) +
+                      "\n            "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("Nav")
+            ],
+            1
+          )
+        ])
+      : _vm._e(),
     _vm._v(" "),
     _c("section", { staticClass: "p-6" }, [
       _c("div", { staticClass: "max-w-4xl mx-auto" }, [_vm._t("default")], 2)
