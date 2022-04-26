@@ -1,6 +1,6 @@
 <template>
+<div>
 
-<Layout>
     <div class="flex justify-between">
         <h1 class="text-3xl">List Users</h1>
         <div>
@@ -55,10 +55,10 @@
     Pages : 
     <Component :is="link.url?'Link':'span'" v-for="link in users.links" :data={search:params.search}   :href="link.url" :key="link.label" v-html="link.label" class="px-1"  />
 </div>
-</Layout>
+</div>
+
 </template>
 <script>
-import Layout from '../../shared/Layout';
 
 export default {
     data(){
@@ -73,7 +73,6 @@ export default {
         frameworks:Array,
         users:Object
     },
-    components:{Layout},
     watch:{
         params:{
             deep:true,

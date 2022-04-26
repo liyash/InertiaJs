@@ -4533,7 +4533,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/Layout */ "./resources/js/shared/Layout.vue");
 //
 //
 //
@@ -4650,7 +4649,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4662,9 +4660,6 @@ __webpack_require__.r(__webpack_exports__);
         price: 0
       }
     };
-  },
-  components: {
-    Layout: _shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: {
     products: Object
@@ -5546,20 +5541,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/Layout */ "./resources/js/shared/Layout.vue");
 //
 //
 //
 //
 //
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     appname: String,
     frameworks: Array
-  },
-  components: {
-    Layout: _shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -5659,8 +5649,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -5676,7 +5664,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../shared/Layout */ "./resources/js/shared/Layout.vue");
 //
 //
 //
@@ -5736,7 +5723,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5749,9 +5736,6 @@ __webpack_require__.r(__webpack_exports__);
     appname: String,
     frameworks: Array,
     users: Object
-  },
-  components: {
-    Layout: _shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   watch: {
     params: {
@@ -5779,20 +5763,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/Layout */ "./resources/js/shared/Layout.vue");
 //
 //
 //
 //
 //
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     appname: String,
     frameworks: Array
-  },
-  components: {
-    Layout: _shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -36514,7 +36493,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
+  return _c("div", [
     _c("div", { staticClass: "flex justify-between" }, [
       _c(
         "h2",
@@ -36556,23 +36535,7 @@ var render = function() {
                 "div",
                 { key: product.id, staticClass: "group relative" },
                 [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none"
-                    },
-                    [
-                      _c("img", {
-                        staticClass:
-                          "w-full h-full object-center object-cover lg:w-full lg:h-full",
-                        attrs: {
-                          src: "https://picsum.photos/200",
-                          alt: "Front of men&#039;s Basic Tee in black."
-                        }
-                      })
-                    ]
-                  ),
+                  _vm._m(0, true),
                   _vm._v(" "),
                   _c("div", { staticClass: "mt-4 flex justify-between" }, [
                     _c("div", [
@@ -36645,11 +36608,7 @@ var render = function() {
                   "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
               },
               [
-                _c("div", { staticClass: "fixed inset-0 transition-opacity" }, [
-                  _c("div", {
-                    staticClass: "absolute inset-0 bg-gray-500 opacity-75"
-                  })
-                ]),
+                _vm._m(1),
                 _vm._v(" "),
                 _c("span", {
                   staticClass:
@@ -36962,7 +36921,38 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none"
+      },
+      [
+        _c("img", {
+          staticClass:
+            "w-full h-full object-center object-cover lg:w-full lg:h-full",
+          attrs: {
+            src: "https://picsum.photos/200",
+            alt: "Front of men&#039;s Basic Tee in black."
+          }
+        })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fixed inset-0 transition-opacity" }, [
+      _c("div", { staticClass: "absolute inset-0 bg-gray-500 opacity-75" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38270,11 +38260,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
-    _c("h1", { staticClass: "text-3xl " }, [_vm._v("Settings")])
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h1", { staticClass: "text-3xl " }, [_vm._v("Settings")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38338,234 +38335,235 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
-    _c("form", { attrs: { method: "post", action: "/" } }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
-        },
-        [
-          _c("div", { staticClass: "max-w-md w-full space-y-8" }, [
-            _c("div", [
-              _c("img", {
-                staticClass: "mx-auto h-12 w-auto",
-                attrs: {
-                  src:
-                    "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
-                  alt: "Workflow"
+  return _c("form", { attrs: { method: "post", action: "/" } }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+      },
+      [
+        _c("div", { staticClass: "max-w-md w-full space-y-8" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              staticClass: "mt-8 space-y-6",
+              attrs: { action: "#", method: "POST" }
+            },
+            [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.id,
+                    expression: "id"
+                  }
+                ],
+                attrs: { type: "hidden", name: "id", value: "" },
+                domProps: { value: _vm.id },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.id = $event.target.value
+                  }
                 }
               }),
               _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "mt-6 text-center text-3xl font-extrabold text-gray-900"
-                },
-                [_vm._v("Add User")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                staticClass: "mt-8 space-y-6",
-                attrs: { action: "#", method: "POST" }
-              },
-              [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.id,
-                      expression: "id"
-                    }
-                  ],
-                  attrs: { type: "hidden", name: "id", value: "" },
-                  domProps: { value: _vm.id },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.id = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "rounded-md shadow-sm -space-y-px" }, [
-                  _c("div", [
-                    _c(
-                      "label",
-                      { staticClass: "block mt-8", attrs: { for: "name" } },
-                      [_vm._v("Name")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.name,
-                          expression: "name"
-                        }
-                      ],
-                      staticClass:
-                        "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                      attrs: {
-                        id: "name",
-                        name: "name",
-                        type: "text",
-                        autocomplete: "off",
-                        required: "",
-                        placeholder: "Name"
-                      },
-                      domProps: { value: _vm.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.name = $event.target.value
-                        }
-                      }
-                    })
-                  ]),
+              _c("div", { staticClass: "rounded-md shadow-sm -space-y-px" }, [
+                _c("div", [
+                  _c(
+                    "label",
+                    { staticClass: "block mt-8", attrs: { for: "name" } },
+                    [_vm._v("Name")]
+                  ),
                   _vm._v(" "),
-                  _c("div", [
-                    _c(
-                      "label",
-                      { staticClass: " mt-8", attrs: { for: "email" } },
-                      [_vm._v("Email address")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.email,
-                          expression: "email"
-                        }
-                      ],
-                      staticClass:
-                        "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                      attrs: {
-                        id: "email",
-                        name: "email",
-                        type: "email",
-                        autocomplete: "off",
-                        required: "",
-                        placeholder: "Email address"
-                      },
-                      domProps: { value: _vm.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.email = $event.target.value
-                        }
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.name,
+                        expression: "name"
                       }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("label", { attrs: { for: "password" } }, [
-                      _vm._v("Password")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.password,
-                          expression: "password"
+                    ],
+                    staticClass:
+                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                    attrs: {
+                      id: "name",
+                      name: "name",
+                      type: "text",
+                      autocomplete: "off",
+                      required: "",
+                      placeholder: "Name"
+                    },
+                    domProps: { value: _vm.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
                         }
-                      ],
-                      staticClass:
-                        "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                      attrs: {
-                        id: "password",
-                        name: "password",
-                        type: "password",
-                        autocomplete: "off",
-                        required: "",
-                        placeholder: "Password"
-                      },
-                      domProps: { value: _vm.password },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.password = $event.target.value
-                        }
+                        _vm.name = $event.target.value
                       }
-                    })
-                  ])
+                    }
+                  })
                 ]),
                 _vm._v(" "),
                 _c("div", [
                   _c(
-                    "button",
-                    {
-                      staticClass:
-                        "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
-                      attrs: { type: "submit" }
+                    "label",
+                    { staticClass: " mt-8", attrs: { for: "email" } },
+                    [_vm._v("Email address")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.email,
+                        expression: "email"
+                      }
+                    ],
+                    staticClass:
+                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                    attrs: {
+                      id: "email",
+                      name: "email",
+                      type: "email",
+                      autocomplete: "off",
+                      required: "",
+                      placeholder: "Email address"
                     },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "absolute left-0 inset-y-0 flex items-center pl-3"
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "h-5 w-5 text-indigo-500 group-hover:text-indigo-400",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                viewBox: "0 0 20 20",
-                                fill: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "fill-rule": "evenodd",
-                                  d:
-                                    "M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z",
-                                  "clip-rule": "evenodd"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(
-                        "\n                    Create\n                    "
-                      )
-                    ]
-                  )
+                    domProps: { value: _vm.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.email = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("label", { attrs: { for: "password" } }, [
+                    _vm._v("Password")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.password,
+                        expression: "password"
+                      }
+                    ],
+                    staticClass:
+                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                    attrs: {
+                      id: "password",
+                      name: "password",
+                      type: "password",
+                      autocomplete: "off",
+                      required: "",
+                      placeholder: "Password"
+                    },
+                    domProps: { value: _vm.password },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.password = $event.target.value
+                      }
+                    }
+                  })
                 ])
-              ]
-            )
-          ])
-        ]
-      )
-    ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+                    attrs: { type: "submit" }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "absolute left-0 inset-y-0 flex items-center pl-3"
+                      },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass:
+                              "h-5 w-5 text-indigo-500 group-hover:text-indigo-400",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 20 20",
+                              fill: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "fill-rule": "evenodd",
+                                d:
+                                  "M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z",
+                                "clip-rule": "evenodd"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v("\n                Create\n                ")
+                  ]
+                )
+              ])
+            ]
+          )
+        ])
+      ]
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("img", {
+        staticClass: "mx-auto h-12 w-auto",
+        attrs: {
+          src: "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
+          alt: "Workflow"
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "h2",
+        {
+          staticClass: "mt-6 text-center text-3xl font-extrabold text-gray-900"
+        },
+        [_vm._v("Add User")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38588,7 +38586,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
+  return _c("div", [
     _c("div", { staticClass: "flex justify-between" }, [
       _c("h1", { staticClass: "text-3xl" }, [_vm._v("List Users")]),
       _vm._v(" "),
@@ -38634,45 +38632,7 @@ var render = function() {
         "table",
         { staticClass: "min-w-full text-sm divide-y-2 divide-gray-200" },
         [
-          _c("thead", [
-            _c("tr", [
-              _c(
-                "th",
-                {
-                  staticClass:
-                    "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
-                },
-                [_vm._v("\n          Name\n        ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "th",
-                {
-                  staticClass:
-                    "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
-                },
-                [_vm._v("\n          Email\n        ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "th",
-                {
-                  staticClass:
-                    "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
-                },
-                [_vm._v("\n          Role\n        ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "th",
-                {
-                  staticClass:
-                    "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
-                },
-                [_vm._v("\n          Photo\n        ")]
-              )
-            ])
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "tbody",
@@ -38740,7 +38700,52 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c(
+          "th",
+          {
+            staticClass:
+              "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
+          },
+          [_vm._v("\n          Name\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
+          },
+          [_vm._v("\n          Email\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
+          },
+          [_vm._v("\n          Role\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "px-4 py-2 font-medium text-left text-gray-900 whitespace-nowrap"
+          },
+          [_vm._v("\n          Photo\n        ")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38763,11 +38768,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Layout", [
-    _c("h1", { staticClass: "text-3xl" }, [_vm._v("Hello User")])
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h1", { staticClass: "text-3xl" }, [_vm._v("Hello User")])
+    ])
+  }
+]
 render._withStripped = true
 
 

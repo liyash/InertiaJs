@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <div>
         <div class="flex justify-between">
             <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Product List
                     </h2>
@@ -112,10 +112,9 @@
                             </div>
                         </div>
                     </div>
-    </Layout>
+    </div>
 </template>
 <script>
-import Layout from '../shared/Layout';
 export default {
     data(){
         return{
@@ -129,7 +128,6 @@ export default {
             
         }
     },
-    components:{Layout},
     props:{
         products:Object
     },methods: {
