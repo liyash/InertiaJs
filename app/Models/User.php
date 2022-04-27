@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function setAttribute($key, $value)
+    {
+        if($key=="password"){
+            $this->attributes['password'] = bcrypt($value);
+        }else{
+            $this->attributes[$key] = $value;
+        }
+    }
 }

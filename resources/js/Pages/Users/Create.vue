@@ -2,7 +2,7 @@
         <form @submit.prevent="submitform()" >
             <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full space-y-8">
-                    <div>
+                    <div class="">
                     <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
                     <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Add User</h2>
                     
@@ -11,18 +11,22 @@
                     <div class="rounded-md shadow-sm -space-y-px">
                         <div>
                         <label for="name" class="block mt-8">Name</label>
-                        <input v-model="form.name" id="name" name="name" type="text" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
+                        <input v-model="form.name" id="name" name="name" type="text" autocomplete="off"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
+                        <div v-if="$page.props.errors.name" class="text-red-400 text-xs" v-text="$page.props.errors.name"></div>
                         </div>
                         <div>
                         
                         
                         <label for="email" class=" mt-8">Email address</label>
                         <input v-model="form.email" id="email" name="email" type="email" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                        <div v-if="$page.props.errors.email" class="text-red-400 text-xs" v-text="$page.props.errors.email"></div>
+
                         </div>
                         <div>
                         <label for="password" class="">Password</label>
                         <input v-model="form.password" id="password" name="password" type="password" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
-                        </div>
+                        <div v-if="$page.props.errors.password" class="text-red-400 text-xs" v-text="$page.props.errors.password"></div>
+</div>
                     </div>
 
                     
@@ -61,7 +65,7 @@ export default {
     },
     methods:{
         submitform(){
-            this.$inertia.post(route('user-create'));
+            this.$inertia.post(route('user-create',this.form));
         }
     }
 };

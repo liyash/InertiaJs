@@ -5679,6 +5679,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -5696,7 +5700,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitform: function submitform() {
-      this.$inertia.post(route('user-create'));
+      this.$inertia.post(route('user-create', this.form));
     }
   }
 });
@@ -5715,6 +5719,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/AppLayout.vue */ "./resources/js/Layouts/AppLayout.vue");
+//
 //
 //
 //
@@ -38574,7 +38579,6 @@ var render = function() {
                     name: "name",
                     type: "text",
                     autocomplete: "off",
-                    required: "",
                     placeholder: "Name"
                   },
                   domProps: { value: _vm.form.name },
@@ -38586,7 +38590,16 @@ var render = function() {
                       _vm.$set(_vm.form, "name", $event.target.value)
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.$page.props.errors.name
+                  ? _c("div", {
+                      staticClass: "text-red-400 text-xs",
+                      domProps: {
+                        textContent: _vm._s(_vm.$page.props.errors.name)
+                      }
+                    })
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c("div", [
@@ -38622,7 +38635,16 @@ var render = function() {
                       _vm.$set(_vm.form, "email", $event.target.value)
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.$page.props.errors.email
+                  ? _c("div", {
+                      staticClass: "text-red-400 text-xs",
+                      domProps: {
+                        textContent: _vm._s(_vm.$page.props.errors.email)
+                      }
+                    })
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c("div", [
@@ -38658,7 +38680,16 @@ var render = function() {
                       _vm.$set(_vm.form, "password", $event.target.value)
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.$page.props.errors.password
+                  ? _c("div", {
+                      staticClass: "text-red-400 text-xs",
+                      domProps: {
+                        textContent: _vm._s(_vm.$page.props.errors.password)
+                      }
+                    })
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -38703,7 +38734,9 @@ var render = function() {
                       )
                     ]
                   ),
-                  _vm._v("\n                Create\n                ")
+                  _vm._v(
+                    "\n                        Create\n                        "
+                  )
                 ]
               )
             ])
@@ -38718,7 +38751,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", {}, [
       _c("img", {
         staticClass: "mx-auto h-12 w-auto",
         attrs: {
@@ -38767,15 +38800,16 @@ var render = function() {
           { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
           [
             _c("div", { staticClass: "flex justify-between" }, [
-              _c("h1", { staticClass: "text-3xl" }, [_vm._v("List Users")]),
-              _vm._v(" "),
               _c(
                 "div",
+                { staticClass: "flex items-center" },
                 [
+                  _c("h1", { staticClass: "text-3xl" }, [_vm._v("List Users")]),
+                  _vm._v(" "),
                   _c(
                     "Link",
                     {
-                      staticClass: "text-blue-500 hover:underline",
+                      staticClass: "text-blue-500 hover:underline ml-3",
                       attrs: { href: "usercreate" }
                     },
                     [_vm._v(" Add User")]
