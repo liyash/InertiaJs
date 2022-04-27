@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\User;
 use App\Models\Products;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +39,7 @@ Route::middleware('auth')->group(function(){
     
     
     Route::get('/', function () {
-        return inertia::render('Welcome',[
+        return inertia::render('Dashboard',[
             "appname"=>"Data Collection App",
             "frameworks"=>[
                 "Java","Php"
@@ -91,7 +93,9 @@ Route::middleware('auth')->group(function(){
         
         return inertia::render('Users/Index',["users"=>$users]);
     })->name('users');
-    
+
+    Route::post('/user-create', [UserController::class, 'create'])->name('user-create');
+
     Route::get('usercreate', function () {
         
         
