@@ -1,7 +1,7 @@
 
 <template>
 <div>
-<section class="p-6  bg-gray-200">
+<section class="p-6  bg-gray-200" v-if="$page.props.auth.user.username">
     <header class="flex justify-between">
         <div class="flex item-center">
             <h1 class="font-bold text-lg">My App</h1>
@@ -23,10 +23,11 @@
 </div>
 </template>
 
-<script>
+<script setup>
 import Nav from "./Nav";
 export default {
-    components:{Nav}
+    components:{Nav},
+    
 }
 </script>
 

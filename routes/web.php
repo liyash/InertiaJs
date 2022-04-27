@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function(){
                 "Java","Php"
             ]
         ]);
-    });
+    })->name('dashboard');
     
 
 
@@ -61,7 +61,7 @@ Route::middleware('auth')->group(function(){
             ],
             "products"=>$products
         ]);
-    });
+    })->name('products');
     Route::post('product', function () {
         $createProduct = Products::create([
             "title"=>request("title"),
@@ -105,7 +105,7 @@ Route::middleware('auth')->group(function(){
     
     Route::get('settings', function () {
         return inertia::render('Settings');
-    });
+    })->name('settings');
     Route::post('logout', function () {
         \Auth::guard('web')->logout();
 

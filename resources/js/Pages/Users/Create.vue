@@ -1,5 +1,5 @@
 <template>
-        <form method="post" action="/" >
+        <form @submit.prevent="submitform()" >
             <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full space-y-8">
                     <div>
@@ -7,22 +7,21 @@
                     <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Add User</h2>
                     
                     </div>
-                    <form class="mt-8 space-y-6" action="#" method="POST">
-                    <input type="hidden" name="id" v-model="id" value="">
+                    <input type="hidden" v-model="form.id" name="id"  value="">
                     <div class="rounded-md shadow-sm -space-y-px">
                         <div>
                         <label for="name" class="block mt-8">Name</label>
-                        <input v-model="name" id="name" name="name" type="text" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
+                        <input v-model="form.name" id="name" name="name" type="text" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
                         </div>
                         <div>
                         
                         
                         <label for="email" class=" mt-8">Email address</label>
-                        <input v-model="email" id="email" name="email" type="email" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                        <input v-model="form.email" id="email" name="email" type="email" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
                         </div>
                         <div>
                         <label for="password" class="">Password</label>
-                        <input v-model="password" id="password" name="password" type="password" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                        <input v-model="form.password" id="password" name="password" type="password" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
                         </div>
                     </div>
 
@@ -39,12 +38,32 @@
                         Create
                         </button>
                     </div>
-                    </form>
                 </div>
             </div>
         </form>
 </template>
-<script setup>
+<script >
+import AppLayout from '../../Layouts/AppLayout.vue'
+
 export default {
-}
+    components: {
+        AppLayout
+    },
+    data(){
+        return{
+            form:{
+                id:'',
+                name:'',
+                email:'',
+                password:''
+            }
+        }
+    },
+    methods:{
+        submitform(){
+            this.$inertia.post(route('user-create'));
+        }
+    }
+};
+ 
 </script>
