@@ -6,6 +6,7 @@ import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-v
 import PortalVue from 'portal-vue';
 import {Link} from '@inertiajs/inertia-vue';
 import Layout from './shared/Layout';
+import AppLayout from './Layouts/AppLayout';
 
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);
@@ -22,9 +23,9 @@ new Vue({
                 {
                    let page = require(`./Pages/${name}`).default;
                    if(!page.layout){
-                       page.layout=Layout;
+                    //    page.layout=AppLayout;
                    }
-                   page.layout??Layout;
+                //    page.layout??AppLayout;
                    
                    return page;
                 }

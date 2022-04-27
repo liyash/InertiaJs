@@ -1,5 +1,9 @@
 <template>
-<div>
+<app-layout>
+
+<div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
     <div class="flex justify-between">
         <h1 class="text-3xl">List Users</h1>
@@ -56,9 +60,13 @@
     <Component :is="link.url?'Link':'span'" v-for="link in users.links" :data={search:params.search}   :href="link.url" :key="link.label" v-html="link.label" class="px-1"  />
 </div>
 </div>
+</div>
+</div>
+    </app-layout>
 
 </template>
 <script>
+import AppLayout from '../../Layouts/AppLayout.vue'
 
 export default {
     data(){
@@ -68,6 +76,9 @@ export default {
             }
         }
     },
+    components:{
+        AppLayout
+        },
     props:{
         appname:String,
         frameworks:Array,
