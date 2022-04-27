@@ -1,4 +1,5 @@
 <template>
+<AppLayout>
         <form @submit.prevent="submitform()" >
             <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-md w-full space-y-8">
@@ -26,7 +27,7 @@
                         <label for="password" class="">Password</label>
                         <input v-model="form.password" id="password" name="password" type="password" autocomplete="off" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
                         <div v-if="$page.props.errors.password" class="text-red-400 text-xs" v-text="$page.props.errors.password"></div>
-</div>
+                        </div>
                     </div>
 
                     
@@ -45,6 +46,7 @@
                 </div>
             </div>
         </form>
+</AppLayout>
 </template>
 <script >
 import AppLayout from '../../Layouts/AppLayout.vue'
