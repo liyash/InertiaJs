@@ -5685,6 +5685,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -38516,258 +38523,293 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("AppLayout", [
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.submitform()
-          }
-        }
-      },
-      [
+    _c("div", { staticClass: "py-12" }, [
+      _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
         _c(
           "div",
-          {
-            staticClass:
-              "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
-          },
+          { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
           [
-            _c("div", { staticClass: "max-w-md w-full space-y-8" }, [
-              _c("div", {}, [
-                _c("img", {
-                  staticClass: "mx-auto h-12 w-auto",
-                  attrs: {
-                    src:
-                      "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
-                    alt: "Workflow"
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "mt-6 text-center text-3xl font-extrabold text-gray-900"
-                  },
-                  [_vm._v("Add User")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.id,
-                    expression: "form.id"
-                  }
-                ],
-                attrs: { type: "hidden", name: "id", value: "" },
-                domProps: { value: _vm.form.id },
+            _c(
+              "form",
+              {
                 on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.form, "id", $event.target.value)
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.submitform()
                   }
                 }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "rounded-md shadow-sm -space-y-px" }, [
-                _c("div", [
-                  _c(
-                    "label",
-                    { staticClass: "block mt-8", attrs: { for: "name" } },
-                    [_vm._v("Name")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.name,
-                        expression: "form.name"
-                      }
-                    ],
-                    staticClass:
-                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                    attrs: {
-                      id: "name",
-                      name: "name",
-                      type: "text",
-                      autocomplete: "off",
-                      placeholder: "Name"
-                    },
-                    domProps: { value: _vm.form.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "name", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.props.errors.name
-                    ? _c("div", {
-                        staticClass: "text-red-400 text-xs",
-                        domProps: {
-                          textContent: _vm._s(_vm.$page.props.errors.name)
-                        }
-                      })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c(
-                    "label",
-                    { staticClass: " mt-8", attrs: { for: "email" } },
-                    [_vm._v("Email address")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.email,
-                        expression: "form.email"
-                      }
-                    ],
-                    staticClass:
-                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                    attrs: {
-                      id: "email",
-                      name: "email",
-                      type: "email",
-                      autocomplete: "off",
-                      required: "",
-                      placeholder: "Email address"
-                    },
-                    domProps: { value: _vm.form.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "email", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.props.errors.email
-                    ? _c("div", {
-                        staticClass: "text-red-400 text-xs",
-                        domProps: {
-                          textContent: _vm._s(_vm.$page.props.errors.email)
-                        }
-                      })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("label", { attrs: { for: "password" } }, [
-                    _vm._v("Password")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.password,
-                        expression: "form.password"
-                      }
-                    ],
-                    staticClass:
-                      "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                    attrs: {
-                      id: "password",
-                      name: "password",
-                      type: "password",
-                      autocomplete: "off",
-                      required: "",
-                      placeholder: "Password"
-                    },
-                    domProps: { value: _vm.form.password },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "password", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.props.errors.password
-                    ? _c("div", {
-                        staticClass: "text-red-400 text-xs",
-                        domProps: {
-                          textContent: _vm._s(_vm.$page.props.errors.password)
-                        }
-                      })
-                    : _vm._e()
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", [
+              },
+              [
                 _c(
-                  "button",
+                  "div",
                   {
                     staticClass:
-                      "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
-                    attrs: { type: "submit" }
+                      "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
                   },
                   [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "absolute left-0 inset-y-0 flex items-center pl-3"
-                      },
-                      [
+                    _c("div", { staticClass: "max-w-md w-full space-y-8" }, [
+                      _c("div", {}, [
+                        _c("img", {
+                          staticClass: "mx-auto h-12 w-auto",
+                          attrs: {
+                            src:
+                              "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
+                            alt: "Workflow"
+                          }
+                        }),
+                        _vm._v(" "),
                         _c(
-                          "svg",
+                          "h2",
                           {
                             staticClass:
-                              "h-5 w-5 text-indigo-500 group-hover:text-indigo-400",
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              viewBox: "0 0 20 20",
-                              fill: "currentColor",
-                              "aria-hidden": "true"
+                              "mt-6 text-center text-3xl font-extrabold text-gray-900"
+                          },
+                          [_vm._v("Add User")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.id,
+                            expression: "form.id"
+                          }
+                        ],
+                        attrs: { type: "hidden", name: "id", value: "" },
+                        domProps: { value: _vm.form.id },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
                             }
+                            _vm.$set(_vm.form, "id", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "rounded-md shadow-sm -space-y-px" },
+                        [
+                          _c("div", [
+                            _c(
+                              "label",
+                              {
+                                staticClass: "block mt-8",
+                                attrs: { for: "name" }
+                              },
+                              [_vm._v("Name")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.name,
+                                  expression: "form.name"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                              attrs: {
+                                id: "name",
+                                name: "name",
+                                type: "text",
+                                autocomplete: "off",
+                                placeholder: "Name"
+                              },
+                              domProps: { value: _vm.form.name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "name",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm.$page.props.errors.name
+                              ? _c("div", {
+                                  staticClass: "text-red-400 text-xs",
+                                  domProps: {
+                                    textContent: _vm._s(
+                                      _vm.$page.props.errors.name
+                                    )
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c(
+                              "label",
+                              { staticClass: " mt-8", attrs: { for: "email" } },
+                              [_vm._v("Email address")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.email,
+                                  expression: "form.email"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                              attrs: {
+                                id: "email",
+                                name: "email",
+                                type: "email",
+                                autocomplete: "off",
+                                required: "",
+                                placeholder: "Email address"
+                              },
+                              domProps: { value: _vm.form.email },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "email",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm.$page.props.errors.email
+                              ? _c("div", {
+                                  staticClass: "text-red-400 text-xs",
+                                  domProps: {
+                                    textContent: _vm._s(
+                                      _vm.$page.props.errors.email
+                                    )
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("label", { attrs: { for: "password" } }, [
+                              _vm._v("Password")
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.password,
+                                  expression: "form.password"
+                                }
+                              ],
+                              staticClass:
+                                "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                              attrs: {
+                                id: "password",
+                                name: "password",
+                                type: "password",
+                                autocomplete: "off",
+                                required: "",
+                                placeholder: "Password"
+                              },
+                              domProps: { value: _vm.form.password },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "password",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm.$page.props.errors.password
+                              ? _c("div", {
+                                  staticClass: "text-red-400 text-xs",
+                                  domProps: {
+                                    textContent: _vm._s(
+                                      _vm.$page.props.errors.password
+                                    )
+                                  }
+                                })
+                              : _vm._e()
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+                            attrs: { type: "submit" }
                           },
                           [
-                            _c("path", {
-                              attrs: {
-                                "fill-rule": "evenodd",
-                                d:
-                                  "M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z",
-                                "clip-rule": "evenodd"
-                              }
-                            })
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "absolute left-0 inset-y-0 flex items-center pl-3"
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "h-5 w-5 text-indigo-500 group-hover:text-indigo-400",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 20 20",
+                                      fill: "currentColor",
+                                      "aria-hidden": "true"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "fill-rule": "evenodd",
+                                        d:
+                                          "M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z",
+                                        "clip-rule": "evenodd"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(
+                              "\n                        Create\n                        "
+                            )
                           ]
                         )
-                      ]
-                    ),
-                    _vm._v(
-                      "\n                        Create\n                        "
-                    )
+                      ])
+                    ])
                   ]
                 )
-              ])
-            ])
+              ]
+            )
           ]
         )
-      ]
-    )
+      ])
+    ])
   ])
 }
 var staticRenderFns = []
